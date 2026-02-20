@@ -11,7 +11,7 @@ class Cli < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/partio-io/cli/releases/download/v0.0.1/cli_0.0.1_darwin_amd64.tar.gz"
-      sha256 "d505d5e3c4fb96f9b3a1302448939e4c9c0187a398b68cee997e061d2c1267d1"
+      sha256 "734a2ef297ff5338d94354ca4fc13b24efb094338e25dd02e18333708c1802bb"
 
       def install
         bin.install "partio"
@@ -19,7 +19,7 @@ class Cli < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/partio-io/cli/releases/download/v0.0.1/cli_0.0.1_darwin_arm64.tar.gz"
-      sha256 "05ba695dfeb58aa3eeaeef377a55c83b4c1a19606b2b17ec7000976283000bfd"
+      sha256 "2ae917f5cc9051f9a8e4e864f264633df9f91520c5d20be946896869d566a15d"
 
       def install
         bin.install "partio"
@@ -30,14 +30,14 @@ class Cli < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/partio-io/cli/releases/download/v0.0.1/cli_0.0.1_linux_amd64.tar.gz"
-      sha256 "3c1d4a17d1cf70d8f163f728aec38e0e830365c0b81a591e08fa51cb4e7ee6c1"
+      sha256 "a2c0065a29974db82a7826469b1b42770e2f90add41330aac015e246338b6e9c"
       def install
         bin.install "partio"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/partio-io/cli/releases/download/v0.0.1/cli_0.0.1_linux_arm64.tar.gz"
-      sha256 "aac99e8db8439a60c77a92ed83431668310bf5a5689ba9711142c309ce42dc5d"
+      sha256 "ee108f0f7d6d8d2b5091d8d4f5e9cd8acc9014123ab1f974882858be62d3315c"
       def install
         bin.install "partio"
       end
