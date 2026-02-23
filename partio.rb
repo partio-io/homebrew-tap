@@ -5,21 +5,21 @@
 class Partio < Formula
   desc "Capture the why behind your code changes"
   homepage "https://github.com/partio-io/cli"
-  version "0.0.2"
+  version "0.0.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/partio-io/cli/releases/download/v0.0.2/partio_0.0.2_darwin_amd64.tar.gz"
-      sha256 "1b51395bd17a79a06705dc577b16306534625ae0228dca36f3eab06008e95f7b"
+      url "https://github.com/partio-io/cli/releases/download/v0.0.3/partio_0.0.3_darwin_amd64.tar.gz"
+      sha256 "b255e94498e706ca438d926416564f44f1ccbce3f5d9a3f6a30d1cf38952170f"
 
       define_method(:install) do
         bin.install "partio"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/partio-io/cli/releases/download/v0.0.2/partio_0.0.2_darwin_arm64.tar.gz"
-      sha256 "9b2b58dfa166c9530cad551e403d69ebcf721bccfb415950ab5db419d5586b48"
+      url "https://github.com/partio-io/cli/releases/download/v0.0.3/partio_0.0.3_darwin_arm64.tar.gz"
+      sha256 "676cf834aa9d4584ef1ca630cc3db835c3bb131eb3d5660f5253ac69b2bef05f"
 
       define_method(:install) do
         bin.install "partio"
@@ -29,15 +29,15 @@ class Partio < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/partio-io/cli/releases/download/v0.0.2/partio_0.0.2_linux_amd64.tar.gz"
-      sha256 "37a1f9de2b36bae90a23a700d1d26fbd068021926aff8d607907d9686d9c9685"
+      url "https://github.com/partio-io/cli/releases/download/v0.0.3/partio_0.0.3_linux_amd64.tar.gz"
+      sha256 "3219b7f2aa100dc57da7b29b304a804c28c20175de87e9a569c0c03d08afc863"
       define_method(:install) do
         bin.install "partio"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/partio-io/cli/releases/download/v0.0.2/partio_0.0.2_linux_arm64.tar.gz"
-      sha256 "c1b2c95018d90261afde8fbea7cd8816f1234097befe6e3bfd50e25142801061"
+      url "https://github.com/partio-io/cli/releases/download/v0.0.3/partio_0.0.3_linux_arm64.tar.gz"
+      sha256 "c9c80b8d101a68731802b5c472848d2d96f94295b5bd080a23ee61dd2f9330cf"
       define_method(:install) do
         bin.install "partio"
       end
