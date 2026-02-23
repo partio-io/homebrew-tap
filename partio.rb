@@ -5,23 +5,23 @@
 class Partio < Formula
   desc "Capture the why behind your code changes"
   homepage "https://github.com/partio-io/cli"
-  version "0.0.1"
+  version "0.0.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/partio-io/cli/releases/download/v0.0.1/partio_0.0.1_darwin_amd64.tar.gz"
-      sha256 "2c4bd374f7676a7875478501b1b3b916634d8696eddaf9180049120d063fa89c"
+      url "https://github.com/partio-io/cli/releases/download/v0.0.2/partio_0.0.2_darwin_amd64.tar.gz"
+      sha256 "1b51395bd17a79a06705dc577b16306534625ae0228dca36f3eab06008e95f7b"
 
-      def install
+      define_method(:install) do
         bin.install "partio"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/partio-io/cli/releases/download/v0.0.1/partio_0.0.1_darwin_arm64.tar.gz"
-      sha256 "179c12560b2d9b465eda7878dc0031d7beef206d2339eb158554ca3d9ec52388"
+      url "https://github.com/partio-io/cli/releases/download/v0.0.2/partio_0.0.2_darwin_arm64.tar.gz"
+      sha256 "9b2b58dfa166c9530cad551e403d69ebcf721bccfb415950ab5db419d5586b48"
 
-      def install
+      define_method(:install) do
         bin.install "partio"
       end
     end
@@ -29,16 +29,16 @@ class Partio < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/partio-io/cli/releases/download/v0.0.1/partio_0.0.1_linux_amd64.tar.gz"
-      sha256 "4a66c224c079b97213d4b1a87229bf3a303ca9f16b9d06512402a1f866244679"
-      def install
+      url "https://github.com/partio-io/cli/releases/download/v0.0.2/partio_0.0.2_linux_amd64.tar.gz"
+      sha256 "37a1f9de2b36bae90a23a700d1d26fbd068021926aff8d607907d9686d9c9685"
+      define_method(:install) do
         bin.install "partio"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/partio-io/cli/releases/download/v0.0.1/partio_0.0.1_linux_arm64.tar.gz"
-      sha256 "e2883f083f2eee0190b83b43553457db15322133c2eb9af6c1d3c2221cd625ee"
-      def install
+      url "https://github.com/partio-io/cli/releases/download/v0.0.2/partio_0.0.2_linux_arm64.tar.gz"
+      sha256 "c1b2c95018d90261afde8fbea7cd8816f1234097befe6e3bfd50e25142801061"
+      define_method(:install) do
         bin.install "partio"
       end
     end
